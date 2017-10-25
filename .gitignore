@@ -10,3 +10,4 @@ repository/
 .project
 .settings
 .classpath
+/bin/

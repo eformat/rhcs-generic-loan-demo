@@ -8,10 +8,11 @@ BPMS=jboss-bpmsuite-6.4.0.GA-deployable-eap7.x.zip
 EAP=jboss-eap-7.0.0-installer.jar
 
 # Adjust these variables to point to an OCP instance.
-OPENSHIFT_USER=openshift-dev
-OPENSHIFT_PWD=devel
-HOST_IP=yourhost.com
-OCP_PRJ=appdev-in-cloud
+OPENSHIFT_USER=mike
+OPENSHIFT_PWD=redhat
+HOST_IP=ocp.australiasoutheast.cloudapp.azure.com
+HOST_PORT=443
+OCP_PRJ=generic-loan
 OCP_APP=rhcs-genericloan-demo
 
 # prints the documentation for this script.
@@ -130,7 +131,7 @@ echo "OpenShift commandline tooling is installed..."
 echo 
 echo "Logging in to OpenShift as $OPENSHIFT_USER..."
 echo
-oc login $HOST_IP:8443 --password=$OPENSHIFT_PWD --username=$OPENSHIFT_USER
+oc login $HOST_IP:$HOST_PORT --password=$OPENSHIFT_PWD --username=$OPENSHIFT_USER
 
 if [ "$?" -ne "0" ]; then
 	echo
