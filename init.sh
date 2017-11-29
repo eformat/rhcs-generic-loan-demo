@@ -9,7 +9,7 @@ EAP=jboss-eap-7.0.0-installer.jar
 
 # Adjust these variables to point to an OCP instance.
 OPENSHIFT_USER=mike
-OPENSHIFT_PWD=redhat
+OPENSHIFT_PWD=
 HOST_IP=ocp.australiasoutheast.cloudapp.azure.com
 HOST_PORT=443
 OCP_PRJ=generic-loan
